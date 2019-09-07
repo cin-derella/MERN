@@ -25,8 +25,8 @@ router.post(
   ],
   async (req, res) => {
     const errors = validationResult(req);
-    //console.log(errors);
-    //console.log(errors.array());
+    console.log(req.body);
+    console.log(errors.array());
     if (!errors.isEmpty()) {
       return res.status(400).json({ error: errors.array() });
     }
@@ -48,6 +48,8 @@ router.post(
         r: 'pg',
         d: 'mm'
       });
+
+      console.log(`avatar is: ${avatar}`);
 
       user = new User({
         name,
@@ -81,6 +83,7 @@ router.post(
       console.error(err.message);
       res.status(500).send('Server error');
     }
+
     /*
     console.log(req.body);
     if (req.body.name == undefined) {

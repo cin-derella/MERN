@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
-// Explaination for post/get
+/* Explaination for post/get
 app.post('/test.html', (req, res) =>
   res.send(
     '<html>' +
@@ -44,4 +44,4 @@ app.get('/welcome.html', (req, res) => {
   res.send(`${j}`);
 });
 
-//
+*/
