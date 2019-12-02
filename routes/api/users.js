@@ -49,7 +49,7 @@ router.post(
         d: 'mm'
       });
 
-      console.log(`avatar is: ${avatar}`);
+      // console.log(`avatar is: ${avatar}`);
 
       user = new User({
         name,
