@@ -34,13 +34,15 @@ router.post(
       check('status', 'Status is required')
         .not()
         .isEmpty(),
-      check('skills', 'Skill is require')
+      check('skills', 'Skill is required')
         .not()
         .isEmpty()
     ]
   ],
   async (req, res) => {
     const errors = validationResult(req);
+    console.log(req.body);
+    console.log(errors.array());
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }

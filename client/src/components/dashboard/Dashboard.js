@@ -15,7 +15,7 @@ const Dashboard = ({
   }, []);
 
   return loading && profile === null ? (
-    <Spinner />
+    (console.log('spinner'), (<Spinner />))
   ) : (
     <Fragment>
       <h1 className='large text-primary'>Dashboard</h1>

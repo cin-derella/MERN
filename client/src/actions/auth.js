@@ -48,8 +48,8 @@ export const register = ({ name, email, password }) => async dispatch => {
     dispatch(loadUser());
     //console.log(`err/N/ res/${res}/`);
   } catch (err) {
-    console.log(err.response.data.error);
-    const errors = err.response.data.error;
+    console.log(err.response.data.errors);
+    const errors = err.response.data.errors;
     if (errors) {
       //console.log(errors);
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
