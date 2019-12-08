@@ -109,6 +109,8 @@ router.post(
 // @access Public
 
 router.get('/', async (req, res) => {
+  console.log(`profile get /`);
+  console.log(req.body);
   try {
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
     res.json(profiles);
@@ -123,6 +125,9 @@ router.get('/', async (req, res) => {
 // @access Public
 
 router.get('/user/:user_id', async (req, res) => {
+  console.log(`profile user/:user_id`);
+  console.log(req.params.user_id);
+  //console.log(errors.array());
   try {
     const profile = await Profile.findOne({
       user: req.params.user_id
