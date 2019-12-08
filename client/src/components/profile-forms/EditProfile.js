@@ -16,7 +16,7 @@ const EditProfile = ({
     location: '',
     status: '',
     skills: '',
-    githubsername: '',
+    githubusername: '',
     bio: '',
     weibo: '',
     wechat: ''
@@ -32,8 +32,8 @@ const EditProfile = ({
       location: loading || !profile.location ? '' : profile.location,
       status: loading || !profile.status ? '' : profile.status,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
-      githubsername:
-        loading || !profile.githubsername ? '' : profile.githubsername,
+      githubusername:
+        loading || !profile.githubusername ? '' : profile.githubusername,
       bio: loading || !profile.bio ? '' : profile.bio,
       weibo: loading || !profile.social ? '' : profile.social.weibo,
       wechat: loading || !profile.social ? '' : profile.social.wechat
@@ -46,7 +46,7 @@ const EditProfile = ({
     location,
     status,
     skills,
-    githubsername,
+    githubusername,
     bio,
     weibo,
     wechat
@@ -137,7 +137,7 @@ const EditProfile = ({
             type='text'
             placeholder='Github Username'
             name='githubusername'
-            value={githubsername}
+            value={githubusername}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
