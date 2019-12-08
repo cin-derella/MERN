@@ -38,7 +38,7 @@ const EditProfile = ({
       weibo: loading || !profile.social ? '' : profile.social.weibo,
       wechat: loading || !profile.social ? '' : profile.social.wechat
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const {
     company,
