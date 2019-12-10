@@ -12,7 +12,7 @@ const AddExperience = ({ addExperience, history }) => {
     from: '',
     to: '',
     current: false,
-    descrpition: ''
+    description: ''
   });
 
   const [toDateDisabled, toggleDisabled] = useState(false);

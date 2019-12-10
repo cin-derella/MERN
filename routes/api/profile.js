@@ -200,7 +200,7 @@ router.put(
       from,
       to,
       current,
-      descrpition
+      description
     } = req.body;
 
     const newExp = {
@@ -210,7 +210,7 @@ router.put(
       from,
       to,
       current,
-      descrpition
+      description
     };
 
     try {
@@ -286,7 +286,7 @@ router.put(
       from,
       to,
       current,
-      descrpition
+      description
     } = req.body;
 
     const newEdu = {
@@ -296,7 +296,7 @@ router.put(
       from,
       to,
       current,
-      descrpition
+      description
     };
 
     try {
